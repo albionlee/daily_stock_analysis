@@ -675,7 +675,8 @@ class GeminiAnalyzer:
                         {"role": "system", "content": self.SYSTEM_PROMPT},
                         {"role": "user", "content": prompt}
                     ],
-                    temperature=generation_config.get('temperature', config.openai_temperature),
+                    # temperature=generation_config.get('temperature', config.openai_temperature),
+                    temperature=1,
                     # max_tokens=generation_config.get('max_output_tokens', 8192),
                     max_completion_tokens=generation_config.get('max_output_tokens', 8192),
                 )
